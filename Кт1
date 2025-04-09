@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE timeTable [
+
+  <!ELEMENT timeTable (complexes, lessons)>
+
+  <!ELEMENT complexes (complex+)>
+
+  <!ELEMENT complex (name, address)>
+
+  <!ATTLIST complex code ID #REQUIRED>
+
+  <!ELEMENT lessons (lesson+)>
+
+  <!ELEMENT lesson (date, time)>
+
+  <!ATTLIST lesson no CDATA #REQUIRED>
+
+  <!ATTLIST lesson complex IDREF #REQUIRED>
+
+]>
+
+<timeTable>
+
+    <complexes>
+
+        <complex code="M147">
+
+            <name>Корпус 1</name>
+
+            <address>просп. Мира, 119</address>
+
+        </complex>
+
+        <complex code="M148">
+
+            <name>Корпус 2</name>
+
+            <address>Дубининская ул., 96</address>
+
+        </complex>
+
+    </complexes>
+
+    <lessons>
+
+        <lesson no="1" complex="M147">
+
+            <date>2024-09-25</date>
+
+            <time>13:00</time>
+
+        </lesson>
+
+        <lesson no="2" complex="M148">
+
+            <date>2024-09-26</date>
+
+            <time>14:00</time>
+
+        </lesson>
+
+    </lessons>
+
+</timeTable>
